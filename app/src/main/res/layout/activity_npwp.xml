@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:text="NPWP"
+                android:textColor="@color/cherry_red"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_bottom"
+        android:layout_below="@+id/toolbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="No NPWP"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_npwp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="Cth : 78.xxx.xxx.x-xxx.xxx"
+                android:inputType="text"
+                android:paddingLeft="16dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+
+            <!-- PIN -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Province"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_province"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="Cth : Aceh"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Districts"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_districts"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="Cth : Kabupaten Aceh Singkil"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Sub Districts"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_sub_districts"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="Cth: Pulau Banyak Barat"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Villages"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_villages"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="cth : Asantola"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Tanggal Berakhir NPWP"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_tgl_npwp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="cth : xxxx/xx/xx"
+                android:imeOptions="actionDone"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="File NPWP"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btn_upload"
+                android:background="@drawable/rounded_fill_green"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="Upload"/>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btn_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@color/white"
+            android:text="BACK"
+            android:textColor="@color/leafy_green" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/white"
+            android:text="NEXT"
+            android:textColor="@color/leafy_green" />
+
+    </RelativeLayout>
+</RelativeLayout>

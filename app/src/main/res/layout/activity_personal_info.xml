@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:text="Personal Info"
+                android:textColor="@color/cherry_red"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back" />
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_bottom"
+        android:layout_below="@+id/toolbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="90dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="@dimen/toolbar_profile_width"
+                    android:layout_height="@dimen/toolbar_profile_width"
+                    android:layout_marginTop="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/activity_padding"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_account_circle_black_48"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="2dp" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/img_plus"
+                    android:layout_width="@dimen/ic_plus_width"
+                    android:layout_height="@dimen/ic_plus_width"
+                    android:layout_alignBottom="@id/img_profile"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_plus"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="1" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="First Name"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="Masukkan Nama Pertama Anda"
+                android:inputType="textPersonName"
+                android:paddingLeft="16dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+
+            <!-- PIN -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Last Name"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="Masukkan Nama Terakhir Anda"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Birth Date"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_birth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="Cth : xxxx/xx/xx"
+                android:imeOptions="actionDone"
+                android:inputType="datetime"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Address"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="Masukkan Alamat Anda"
+                android:imeOptions="actionDone"
+                android:inputType="datetime"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="No KTP"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txt_no_ktp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border_form"
+                android:hint="Masukkan No KTP Anda"
+                android:imeOptions="actionDone"
+                android:inputType="datetime"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Upload KTP"
+                android:textColor="@color/leafy_green"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btn_upload"
+                android:background="@drawable/rounded_fill_green"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="Upload"/>
+
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btn_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/white"
+            android:text="NEXT"
+            android:textColor="@color/leafy_green" />
+
+    </RelativeLayout>
+</RelativeLayout>
